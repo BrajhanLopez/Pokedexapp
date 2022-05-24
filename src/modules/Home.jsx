@@ -8,7 +8,7 @@ const Home = () => {
                 
             </header>
             <main className="main">
-                <img src="./src/images/imagepoke.png" alt="" />
+                <img src="./src/images/imagepoke.png" alt="titulo" />
                 <h1>¡Hola entrenador!</h1>
                 <h3>Para poder comenzar, dame tu nombre</h3>
 
