@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='layout'>
+        <div className='App layout'>
 
             <header className="header">
                 
