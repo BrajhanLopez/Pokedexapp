@@ -46,7 +46,7 @@ const Pokedex = ({ name, pokemon, postperpage, totalpost, paginate,p }) => {
 
         //pokemon = newarr;
         if (newarr.length===0) {
-            alert('no hay resultados')
+            //alert('no hay resultados')
         }
         setselec(newarr)
     }
@@ -98,7 +98,15 @@ const Pokedex = ({ name, pokemon, postperpage, totalpost, paginate,p }) => {
                 </div>
                             
                 <Listpokedex pokemon={pokemon} selec={selec} />
-                <Pagination postperpage={postperpage}  totalpost={totalpost} paginate={paginate}/>     
+                {
+selec.length > 0 ?
+<div></div>
+:
+<Pagination postperpage={postperpage}  totalpost={totalpost} paginate={paginate} selec={selec}/>
+
+
+                }
+                    
             </main>
 
         </div>

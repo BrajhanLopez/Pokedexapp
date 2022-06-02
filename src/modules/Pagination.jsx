@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Pagination = ({postperpage, totalpost, paginate}) => {
+const Pagination = ({postperpage, totalpost, paginate, selec}) => {
     const pageNumber = []
     let [matrix, setmatrix] = useState([])
     const p=0
@@ -15,9 +15,9 @@ const Pagination = ({postperpage, totalpost, paginate}) => {
 
 
     useEffect(()=>{
-
-        setmatrix(pageNumber.splice(p,12))
         
+        setmatrix(pageNumber.splice(p,12))
+       
     },[])
     //console.log(matrix);
 
@@ -29,18 +29,23 @@ const Pagination = ({postperpage, totalpost, paginate}) => {
             //console.log(matrix);
         }
 
+        const backpp =() => {
+            setmatrix(pageNumber.splice(matrix[1]-4,12))
+        }
+
 
    
     
-   // console.log(matrix);
+   //console.log(matrix);
 //console.log(pageNumber);
 
 
 
     return (
         <div>
+            
             <ul className='pag-ul'>
-            <button className='pag-button nextback' onClick={()=>paginate(1)}>back</button>
+            <button className='pag-button nextback' onClick={()=>backpp()}>back</button>
                 {matrix.map(number =>(
                    
                     <li key={number}>
