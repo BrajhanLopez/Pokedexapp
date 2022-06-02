@@ -36,7 +36,7 @@ const Pokedex = ({ name, pokemon, postperpage, totalpost, paginate,p }) => {
 
                 if (p[i].types[u].type.name === e.target.value) {
                     newarr.push(p[i])
-                    console.log(e.target.value);
+                   // console.log(e.target.value);
                 }
 
 

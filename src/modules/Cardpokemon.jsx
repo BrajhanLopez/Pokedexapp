@@ -23,6 +23,10 @@ let thp,tatk, tdef, tvel
     tdef = (Number(idpokemon.stats?.[2].base_stat)*10)/15
     tvel = (Number(idpokemon.stats?.[5].base_stat)*10)/15
     //console.log(idpokemon.types[0].type.name);
+
+    const styl = `head-pokefull c-${idpokemon.types?.[0].type.name}` 
+    const styl2 = `card-tip c-${idpokemon.types?.[0].type.name}` 
+    //console.log(styl);
     return (
         <div>
             <header className="footer" >
@@ -40,7 +44,7 @@ let thp,tatk, tdef, tvel
             </header >
 
             <main className='card-pokemonn'>
-                <div className='head-pokefull'>
+                <div className={styl}>
                     <img className='image-pokefull' src={idpokemon.sprites?.other['official-artwork'].front_default} alt="" />
 
                 </div>
@@ -66,7 +70,7 @@ let thp,tatk, tdef, tvel
                         {
 
                             idpokemon.types?.map((ty, index) => (
-                                <h3 className='card-tip' key={index}>
+                                <h3 className={`card-tip c-${ty.type.name}` } key={index}>
                                     {ty.type.name}
                                 </h3>
                             ))

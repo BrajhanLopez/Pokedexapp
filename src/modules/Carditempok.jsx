@@ -9,7 +9,7 @@ const styl2 = `container-red c-${pok.types[0].type.name}`
 const styname = `card-nam n-${pok.types[0].type.name}` 
 const styval = `color-n n-${pok.types[0].type.name}` 
 
-console.log(styl2);
+//console.log(styl2);
    return (
       <div className={styl}>
          <div className={styl2}>

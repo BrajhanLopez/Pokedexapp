@@ -3,7 +3,7 @@ import Carditempok from './Carditempok';
 import { Link } from 'react-router-dom';
 const Listpokedex = ({ pokemon, selec }) => {
 
-  console.log(selec);
+  //console.log(selec);
   return (
     <div>
 

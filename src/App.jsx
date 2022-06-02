@@ -24,7 +24,7 @@ const [name, setname] = useState('')
 
   useEffect(()=> {
   //1126
-    axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=200')
+    axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1126')
     .then(res=> {
 
       for (let i = 0; i < res.data.results.length; i++) {

@@ -2,7 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const ProtectedRoutes = ({name}) => {
 
-    console.log(name);
+    //console.log(name);
 		// Aquí va la condición. Puede ser una condición de cualquier tipo. Lo que 
 		// Importa es que valide si el usuario está loggeado o no
     if(name){
