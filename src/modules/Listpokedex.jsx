@@ -1,9 +1,9 @@
 import React from 'react';
 import Carditempok from './Carditempok';
 import { Link } from 'react-router-dom';
-const Listpokedex = ({ pokemon }) => {
+const Listpokedex = ({ pokemon, selec }) => {
 
-  //console.log(pokemon[0].id);
+  console.log(selec);
   return (
     <div>
 
@@ -12,15 +12,29 @@ const Listpokedex = ({ pokemon }) => {
         <ul className='container-li1'>
 
           {
-            pokemon.map((pok, index) => (
+            selec.length > 0 ?
+            selec.map((pok, index) => (
               <li className='lii' key={index}>
                
-                <Link  className='link-crad' to={`/pokedex/${pok.id}`} >
+                <Link  className='link-crad' to={`${pok.id}`} >
               <Carditempok name={pok.name} img={pok.sprites?.other['official-artwork'].front_default} pok={pok}/>
               </Link>
           </li>
             ))
 
+
+            : 
+            
+            pokemon.map((pok, index) => (
+              
+              <li className='lii' key={index}>
+               
+                <Link  className='link-crad' to={`${pok.id}`} >
+              <Carditempok name={pok.name} img={pok.sprites?.other['official-artwork'].front_default} pok={pok}/>
+              </Link>
+          </li>
+            ))
+            
           }
 
 

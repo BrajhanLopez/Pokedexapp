@@ -25,7 +25,7 @@ let thp,tatk, tdef, tvel
     //console.log(idpokemon.types[0].type.name);
     return (
         <div>
-            <header className="footer">
+            <header className="footer" >
                 <div className='rectangle-red'>
                     <div className='rectangle-black'>
                     </div>
@@ -45,7 +45,7 @@ let thp,tatk, tdef, tvel
 
                 </div>
 
-                <h1 className='h1-pokefull'>#{id}</h1>
+                <h1 className='h1-pokefull'>#{idpokemon.id}</h1>
 
 
 

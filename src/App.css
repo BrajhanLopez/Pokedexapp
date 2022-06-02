@@ -405,6 +405,8 @@ text-transform: uppercase;
 }
 
 .card-t {
+  
+  
   text-align: center;
   color: #4F4F4F;
   font-size: 15px;
@@ -450,4 +452,263 @@ text-transform: uppercase;
 
 .link-crad {
   text-decoration: none;
+  
 }
+
+.mmm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pag-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pag-button {
+
+  width: 90px;
+  height: 90px;
+  background-color: #DD1A1A;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.pag-button:active {
+  background-color: blue;
+}
+
+.grass {
+  border: 5px solid #B1DBBC;
+}
+
+.c-grass {
+  background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+
+}
+
+.n-grass{
+color: #416460;
+}
+
+
+
+
+.fire {
+  border: 5px solid #E6901E;
+}
+
+.c-fire {
+  background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+
+
+}
+
+.n-fire{
+color: #E75C35;
+}
+
+
+
+
+
+.water {
+  border: 5px solid #83B9FF;
+}
+
+.c-water {
+  background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+
+}
+
+.n-water{
+color: #1479FB;
+}
+
+
+
+
+
+.bug {
+  border: 5px solid #4AB648;
+}
+
+.c-bug {
+  background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+
+
+}
+
+.n-bug{
+color: #4AB648;
+}
+
+
+
+
+
+.normal { border: 5px solid #735259;  }
+
+.c-normal {
+  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+
+
+}
+
+.n-normal{  color: #735259;    }
+
+
+
+.poison { border: 5px solid #5B3184;  }
+
+.c-poison{
+  background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+
+
+
+}
+
+.n-poison{  color: #5B3184;    }
+
+
+
+
+
+.electric { border: 5px solid #FDDE67;  }
+
+.c-electric{
+  background: linear-gradient(177.03deg, #f9dd0b -11.97%, #f5f550 71.28%, #f6f3a4 135.64%);
+
+
+
+}
+
+.n-electric{  color: #e6cc09;    }
+
+
+
+
+.ground { border: 5px solid #654008;  }
+
+.c-ground{
+  background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+
+
+
+
+}
+
+.n-ground{  color: #654008;    }
+
+
+
+
+.fighting { border: 5px solid #96402A;  }
+
+.c-fighting{
+  background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+
+
+
+}
+
+.n-fighting{  color: #96402A;    }
+
+
+
+
+.rock { border: 5px solid #7E7E7E;  }
+
+.c-rock{
+  background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+
+
+
+
+}
+
+.n-rock{  color: #7E7E7E;    }
+
+
+
+
+.ghost{ border: 5px solid #323569;  }
+
+.c-ghost{
+  background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+
+
+
+
+
+}
+
+.n-ghost{  color: #323569;    }
+
+
+
+
+
+.ice{ border: 5px solid #6FBEDF;  }
+
+.c-ice{
+  background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+
+
+
+
+
+}
+
+.n-ice{  color: #6FBEDF;    }
+
+
+
+
+.dragon{ border: 5px solid #478A93;  }
+
+.c-dragon{
+  background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+
+
+
+
+
+
+}
+
+.n-dragon{  color: #478A93;    }
+
+
+
+
+
+
+.dark{ border: 5px solid #0B0E0D;  }
+
+.c-dark{
+  background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+
+}
+
+.n-dark{  color: #030706;    }
+
+
+
+
+
+.fairy{ border: 5px solid #971B45;  }
+
+.c-fairy{
+  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+
+
+}
+
+.n-fairy{  color: #971B45;    }

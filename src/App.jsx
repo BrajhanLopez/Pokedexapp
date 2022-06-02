@@ -8,6 +8,8 @@ import Pokedex from './modules/Pokedex'
 import axios from 'axios'
 import Cardpokemon from './modules/Cardpokemon'
 import Listpokedex from './modules/Listpokedex'
+import ProtectedRoutes from './modules/Protectedroute'
+import Pagination from './modules/Pagination'
 
 function App() {
 
@@ -16,9 +18,13 @@ const [name, setname] = useState('')
 
 
   const [pokemon, setpokemon] =useState([])
+
+  const [currentpage, setcurrentpage] = useState(1)
+  const [postperpage, setpostperpage] = useState(20)
+
   useEffect(()=> {
-  
-    axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
+  //1126
+    axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=200')
     .then(res=> {
 
       for (let i = 0; i < res.data.results.length; i++) {
@@ -43,7 +49,11 @@ const [name, setname] = useState('')
  const getname = name => {
    setname(name)
  }
+const indexoflastpost = currentpage * postperpage;
+const indexoffirstpost = indexoflastpost - postperpage;
+const currentpost = pokemon.slice(indexoffirstpost, indexoflastpost);
 
+const paginate = (pageNumber) => setcurrentpage(pageNumber)
 
   return (
 
@@ -52,9 +62,12 @@ const [name, setname] = useState('')
     <Routes>
     
       <Route path='/' element={<Home getname ={getname}/>}/>
-      <Route path='/pokedex' element={<Pokedex name={name} pokemon={pokemon} />}/>
+
+      <Route element={ <ProtectedRoutes name ={name}/> }> 
+      <Route path='/pokedex' element={<Pokedex name={name} pokemon={currentpost} postperpage={postperpage}  totalpost={pokemon.length} paginate={paginate} p={pokemon}/>}/>
+      
       <Route path='/pokedex/:id' element={ <Cardpokemon /> }/>
-       
+      </Route>
 
     </Routes>
     </div>

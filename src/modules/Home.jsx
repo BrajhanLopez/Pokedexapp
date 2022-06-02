@@ -3,12 +3,21 @@ import { Link } from 'react-router-dom';
 
 
 const Home = ({getname}) => {
-    const [name, setname] = useState('')
+    const [name, setname] = useState(
+        window.localStorage.getItem('text')        
+    )
     
 const next = () => {
 getname(name)
 
     }
+
+const setlocalstorage =  value => {
+setname(value)
+window.localStorage.setItem("text",value)
+
+}
+
 
     return (
         <div className='layout'>
@@ -22,18 +31,12 @@ getname(name)
                 <h3>Para poder comenzar, dame tu nombre</h3>
 
                 <div>
-                    <input  className='input-home' type="text" placeholder='Tu nombre ...' onChange={e=>setname(e.target.value)}/>
+                    <input  className='input-home' type="text" placeholder='Tu nombre ...' onChange={e=>setlocalstorage(e.target.value)} value={name}/>
 
-                    {
-                        name ? <Link to='/pokedex'>
+                    <Link to='/pokedex'>
                         <button className='button-home' onClick={next}>Comenzar</button>
                         </Link> :
-                        <Link to='/'>
-                        <button className='button-home' onClick={next}>Comenzar</button>
-                        </Link>
-
-
-                    }
+                       
                     
                 </div>
 
